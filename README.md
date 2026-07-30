@@ -1,0 +1,1 @@
+# blinQ-sales-company

@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blinq Estates Marketplace — Buy, Sell & Earn. Premium properties with transparent 20% commission. Luxury real-estate platform in Kenya."
+    />
+    <meta
+      name="keywords"
+      content="real estate Kenya, property marketplace, sell property, luxury homes, Blinq Estates"
+    />
+    <meta name="theme-color" content="#0a0f1e" />
+    <title>BlinQ FROINTIERS LTD Marketplace | Buy. Sell. Earn.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- ========== STICKY NAVIGATION ========== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo" aria-label="Blinq Estates Home">
+          <span class="logo-icon"></span>
+          <span class="logo-text">Blinq <span>Frointiers Ltd</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+          <a href="#properties" class="nav-link" data-section="properties"
+            >Properties</a
+          >
+          <a href="#marketplace" class="nav-link" data-section="marketplace"
+            >Marketplace</a
+          >
+          <a href="#sell" class="nav-link" data-section="sell">Sell Property</a>
+          <a href="#projects" class="nav-link" data-section="projects"
+            >Projects</a
+          >
+          <a href="#agents" class="nav-link" data-section="agents">Agents</a>
+          <a href="#about" class="nav-link" data-section="about">About</a>
+          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+          <a href="#login" class="nav-link nav-login">Login</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#sell" class="btn btn-cta nav-cta">
+            <i class="fas fa-plus-circle"></i> List Property
+          </a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <span class="logo-text">Blinq<span>Frontiers Ltd</span></span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="drawer-links">
+        <a href="#home" class="drawer-link">Home</a>
+        <a href="#properties" class="drawer-link">Properties</a>
+        <a href="#marketplace" class="drawer-link">Marketplace</a>
+        <a href="#sell" class="drawer-link">Sell Property</a>
+        <a href="#projects" class="drawer-link">Projects</a>
+        <a href="#agents" class="drawer-link">Agents</a>
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+        <a href="#login" class="drawer-link">Login</a>
+        <a href="#sell" class="btn btn-cta drawer-cta">List Property</a>
+      </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <main>
+      <!-- ========== HERO SECTION ========== -->
+      <section class="hero" id="home">
+        <div class="hero-bg" id="heroBg">
+          <img
+            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80"
+            alt="Luxury modern villa with infinity pool at dusk"
+            class="hero-img"
+            loading="eager"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Find Your Dream Property</span>
+            <span class="title-line accent"
+              >or Sell Yours for Maximum Profit</span
+            >
+          </h1>
+          <p class="hero-subtitle">
+            Kenya’s premier dual-model marketplace. Buy luxury homes from Blinq
+            Estates or list your own property and keep <strong>80%</strong> — we
+            earn a transparent <strong>20%</strong> commission only on
+            successful sales.
+          </p>
+
+          <!-- Advanced Search -->
+          <form
+            class="search-bar glass"
+            id="searchForm"
+            role="search"
+            aria-label="Property search"
+          >
+            <div class="search-field">
+              <label for="searchLocation"
+                ><i class="fas fa-map-marker-alt"></i
+              ></label>
+              <select id="searchLocation" name="location">
+                <option value="">Any Location</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="kiambu">Kiambu</option>
+                <option value="ruiru">Ruiru</option>
+                <option value="westlands">Westlands</option>
+                <option value="kakamega">Kakamega</option>
+                <option value="mombasa">Mombasa</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchType"><i class="fas fa-home"></i></label>
+              <select id="searchType" name="type">
+                <option value="">Any Type</option>
+                <option value="villa">Villa</option>
+                <option value="apartment">Apartment</option>
+                <option value="townhouse">Townhouse</option>
+                <option value="commercial">Commercial</option>
+                <option value="land">Land</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchBeds"><i class="fas fa-bed"></i></label>
+              <select id="searchBeds" name="beds">
+                <option value="">Beds</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchMin"><i class="fas fa-tag"></i></label>
+              <input
+                type="number"
+                id="searchMin"
+                name="min"
+                placeholder="Min KSh"
+                min="0"
+              />
+            </div>
+            <div class="search-field">
+              <label for="searchMax"><i class="fas fa-tag"></i></label>
+              <input
+                type="number"
+                id="searchMax"
+                name="max"
+                placeholder="Max KSh"
+                min="0"
+              />
+            </div>
+            <button type="submit" class="btn btn-search">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </form>
+
+          <!-- Floating stats -->
+          <div class="hero-stats">
+            <div class="stat-card glass">
+              <span class="stat-num" data-target="1250">0</span>+
+              <span class="stat-label">Properties</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-target="840">0</span>+
+              <span class="stat-label">Sales</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-target="1.2">0</span>B+
+              <span class="stat-label">Volume (KSh)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ========== FEATURED PROPERTIES ========== -->
+      <section class="section properties" id="properties">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Curated Selection</span>
+            <h2 class="section-title">Featured Luxury Properties</h2>
+            <p class="section-desc">
+              Hand-picked homes and investments from Blinq Estates and verified
+              marketplace sellers.
+            </p>
+          </div>
+
+          <div class="property-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="blinq">
+              Blinq Estates
+            </button>
+            <button class="filter-btn" data-filter="marketplace">
+              Marketplace
+            </button>
+            <button class="filter-btn" data-filter="villa">Villas</button>
+            <button class="filter-btn" data-filter="apartment">
+              Apartments
+            </button>
+          </div>
+
+          <div class="properties-grid" id="propertiesGrid">
+            <!-- Property 1 -->
+            <article
+              class="property-card"
+              data-seller="blinq"
+              data-type="villa"
+              data-price="45000000"
+              data-beds="5"
+              data-location="nairobi"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+                  alt="Modern luxury villa with pool"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge blinq">Blinq Estates</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Azure Heights Villa</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Karen, Nairobi
+                </p>
+                <p class="card-price">KSh 45,000,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 5 Beds</span>
+                  <span><i class="fas fa-bath"></i> 6 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 4,200 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="1">
+                  View Details
+                </button>
+              </div>
+            </article>
+
+            <!-- Property 2 -->
+            <article
+              class="property-card"
+              data-seller="marketplace"
+              data-type="apartment"
+              data-price="18500000"
+              data-beds="3"
+              data-location="westlands"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                  alt="Contemporary apartment interior"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge marketplace">Marketplace Seller</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Skyline Residences</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Westlands, Nairobi
+                </p>
+                <p class="card-price">KSh 18,500,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 3 Beds</span>
+                  <span><i class="fas fa-bath"></i> 3 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 1,850 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="2">
+                  View Details
+                </button>
+              </div>
+            </article>
+
+            <!-- Property 3 -->
+            <article
+              class="property-card"
+              data-seller="blinq"
+              data-type="villa"
+              data-price="72000000"
+              data-beds="6"
+              data-location="kiambu"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                  alt="Grand estate with manicured gardens"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge blinq">Blinq Estates</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Mugumo Signature Estate</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Mugumo Estate, Kiambu
+                </p>
+                <p class="card-price">KSh 72,000,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 6 Beds</span>
+                  <span><i class="fas fa-bath"></i> 7 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 6,800 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="3">
+                  View Details
+                </button>
+              </div>
+            </article>
+
+            <!-- Property 4 -->
+            <article
+              class="property-card"
+              data-seller="marketplace"
+              data-type="townhouse"
+              data-price="28000000"
+              data-beds="4"
+              data-location="ruiru"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                  alt="Modern townhouse exterior"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge marketplace">Marketplace Seller</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Kimbo Green Townhomes</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Kimbo, Ruiru
+                </p>
+                <p class="card-price">KSh 28,000,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 4 Beds</span>
+                  <span><i class="fas fa-bath"></i> 4 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 2,600 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="4">
+                  View Details
+                </button>
+              </div>
+            </article>
+
+            <!-- Property 5 -->
+            <article
+              class="property-card"
+              data-seller="blinq"
+              data-type="apartment"
+              data-price="32000000"
+              data-beds="4"
+              data-location="nairobi"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury penthouse living room"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge blinq">Blinq Estates</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">The Observatory Penthouse</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Upper Hill, Nairobi
+                </p>
+                <p class="card-price">KSh 32,000,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 4 Beds</span>
+                  <span><i class="fas fa-bath"></i> 4 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 3,100 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="5">
+                  View Details
+                </button>
+              </div>
+            </article>
+
+            <!-- Property 6 -->
+            <article
+              class="property-card"
+              data-seller="marketplace"
+              data-type="villa"
+              data-price="55000000"
+              data-beds="5"
+              data-location="mombasa"
+            >
+              <div class="card-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cd00?auto=format&fit=crop&w=800&q=80"
+                  alt="Coastal luxury villa"
+                  loading="lazy"
+                />
+                <button class="fav-btn" aria-label="Add to favorites">
+                  <i class="far fa-heart"></i>
+                </button>
+                <span class="seller-badge marketplace">Marketplace Seller</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Nyali Oceanfront Villa</h3>
+                <p class="card-location">
+                  <i class="fas fa-map-marker-alt"></i> Nyali, Mombasa
+                </p>
+                <p class="card-price">KSh 55,000,000</p>
+                <div class="card-meta">
+                  <span><i class="fas fa-bed"></i> 5 Beds</span>
+                  <span><i class="fas fa-bath"></i> 5 Baths</span>
+                  <span><i class="fas fa-ruler-combined"></i> 5,400 sqft</span>
+                </div>
+                <button class="btn btn-outline view-details" data-id="6">
+                  View Details
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MARKETPLACE / SELL SECTION ========== -->
+      <section class="section marketplace-section" id="marketplace">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">For Sellers</span>
+            <h2 class="section-title">
+              Sell Your Property Through Our Marketplace
+            </h2>
+            <p class="section-desc">
+              List once. Reach thousands of verified buyers. Keep 80% of every
+              successful sale.
+            </p>
+          </div>
+
+          <div class="sell-grid">
+            <!-- Listing Form -->
+            <div class="sell-form-wrapper glass" id="sell">
+              <h3 class="form-title">List Your Property</h3>
+              <form id="listPropertyForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="propTitle">Property Title *</label>
+                    <input
+                      type="text"
+                      id="propTitle"
+                      name="title"
+                      required
+                      placeholder="e.g. 4-Bed Villa in Karen"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="propCategory">Category *</label>
+                    <select id="propCategory" name="category" required>
+                      <option value="">Select category</option>
+                      <option value="villa">Villa</option>
+                      <option value="apartment">Apartment</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land / Plot</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="propDesc">Description *</label>
+                  <textarea
+                    id="propDesc"
+                    name="description"
+                    rows="4"
+                    required
+                    placeholder="Describe the property, features, and unique selling points..."
+                  ></textarea>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="propPrice">Asking Price (KSh) *</label>
+                    <input
+                      type="number"
+                      id="propPrice"
+                      name="price"
+                      required
+                      min="100000"
+                      step="1000"
+                      placeholder="e.g. 25000000"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="propLocation">County / Location *</label>
+                    <input
+                      type="text"
+                      id="propLocation"
+                      name="location"
+                      required
+                      placeholder="e.g. Kiambu, Ruiru"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="propImages">Property Images</label>
+                  <div class="file-upload">
+                    <input
+                      type="file"
+                      id="propImages"
+                      name="images"
+                      accept="image/*"
+                      multiple
+                    />
+                    <label for="propImages" class="file-label">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                      <span>Drag & drop or click to upload</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="sellerName">Your Name *</label>
+                    <input
+                      type="text"
+                      id="sellerName"
+                      name="name"
+                      required
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="sellerEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="sellerEmail"
+                      name="email"
+                      required
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="sellerPhone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="sellerPhone"
+                    name="phone"
+                    required
+                    placeholder="+254 7XX XXX XXX"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-cta btn-full">
+                  <i class="fas fa-paper-plane"></i> Submit Listing
+                </button>
+              </form>
+            </div>
+
+            <!-- Commission Calculator -->
+            <div class="commission-panel glass">
+              <h3 class="form-title">Live Commission Calculator</h3>
+              <p class="calc-intro">
+                Enter your asking price to see exactly what you and Blinq
+                Estates receive.
+              </p>
+
+              <div class="calc-input-group">
+                <label for="calcPrice">Property Price (KSh)</label>
+                <input
+                  type="number"
+                  id="calcPrice"
+                  value="10000000"
+                  min="0"
+                  step="100000"
+                />
+              </div>
+
+              <div class="calc-results">
+                <div class="calc-card seller">
+                  <span class="calc-label">You Receive (80%)</span>
+                  <span class="calc-value" id="sellerGets">KSh 8,000,000</span>
+                </div>
+                <div class="calc-card platform">
+                  <span class="calc-label">Blinq Commission (20%)</span>
+                  <span class="calc-value" id="platformGets"
+                    >KSh 2,000,000</span
+                  >
+                </div>
+              </div>
+
+              <table
+                class="calc-table"
+                aria-label="Commission breakdown examples"
+              >
+                <thead>
+                  <tr>
+                    <th>Property Price</th>
+                    <th>Seller Gets</th>
+                    <th>Blinq Commission</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>KSh 10,000,000</td>
+                    <td>KSh 8,000,000</td>
+                    <td>KSh 2,000,000</td>
+                  </tr>
+                  <tr>
+                    <td>KSh 25,000,000</td>
+                    <td>KSh 20,000,000</td>
+                    <td>KSh 5,000,000</td>
+                  </tr>
+                  <tr>
+                    <td>KSh 50,000,000</td>
+                    <td>KSh 40,000,000</td>
+                    <td>KSh 10,000,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS SHOWCASE ========== -->
+      <section class="section projects" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Blinq Construction</span>
+            <h2 class="section-title">Real Projects Showcase</h2>
+            <p class="section-desc">
+              Landmark developments and contracts delivered by the Blinq team
+              across Kenya.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card glass">
+              <div class="project-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3>Membley</h3>
+              <p class="project-type">Full Contract</p>
+              <p class="project-value">KSh 17 Million</p>
+              <p class="project-desc">
+                Complete residential development contract delivered on schedule.
+              </p>
+            </article>
+
+            <article class="project-card glass">
+              <div class="project-icon"><i class="fas fa-home"></i></div>
+              <h3>Mugumo Estate, Kiambu</h3>
+              <p class="project-type">Full Contract</p>
+              <p class="project-value">KSh 16 Million</p>
+              <p class="project-desc">
+                Premium estate development with full project oversight.
+              </p>
+            </article>
+
+            <article class="project-card glass featured">
+              <div class="project-icon"><i class="fas fa-city"></i></div>
+              <h3>Kimbo, Ruiru</h3>
+              <p class="project-type">Mixed Use Development</p>
+              <p class="project-value">KSh 320 Million</p>
+              <p class="project-desc">
+                Large-scale mixed-use project transforming the Ruiru skyline.
+              </p>
+            </article>
+
+            <article class="project-card glass">
+              <div class="project-icon"><i class="fas fa-building"></i></div>
+              <h3>Kakamega Town</h3>
+              <p class="project-type">Mixed Use Project</p>
+              <p class="project-value">KSh 72 Million</p>
+              <p class="project-desc">
+                Strategic mixed-use development in the heart of Kakamega.
+              </p>
+            </article>
+
+            <article class="project-card glass">
+              <div class="project-icon"><i class="fas fa-briefcase"></i></div>
+              <h3>AFSC Westlands</h3>
+              <p class="project-type">Office Partitions</p>
+              <p class="project-value">KSh 3.5 Million</p>
+              <p class="project-desc">
+                High-end office fit-out and partition works in Westlands.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== WHY CHOOSE US ========== -->
+      <section class="section why-us" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">The Blinq Advantage</span>
+            <h2 class="section-title">Why Choose Us</h2>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card glass">
+              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Secure Transactions</h3>
+              <p>
+                Escrow-style payment protection ensures funds are released only
+                after successful transfer of ownership.
+              </p>
+            </article>
+            <article class="feature-card glass">
+              <div class="feature-icon"><i class="fas fa-percentage"></i></div>
+              <h3>20% Transparent Commission</h3>
+              <p>
+                No hidden fees. You keep 80%. We earn only when your property
+                sells successfully.
+              </p>
+            </article>
+            <article class="feature-card glass">
+              <div class="feature-icon"><i class="fas fa-users"></i></div>
+              <h3>Massive Buyer Network</h3>
+              <p>
+                Thousands of active, verified property seekers looking for their
+                next home or investment.
+              </p>
+            </article>
+            <article class="feature-card glass">
+              <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+              <h3>Premium Marketing Exposure</h3>
+              <p>
+                Featured listings, social promotion, and targeted campaigns that
+                put your property in front of the right buyers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== LIVE STATS ========== -->
+      <section class="section stats-section" id="agents">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Marketplace Pulse</span>
+            <h2 class="section-title">Live Marketplace Statistics</h2>
+          </div>
+          <div class="stats-grid" id="liveStats">
+            <div class="live-stat glass">
+              <span class="live-num" data-target="1250">0</span>
+              <span class="live-label">Properties Listed</span>
+            </div>
+            <div class="live-stat glass">
+              <span class="live-num" data-target="840">0</span>
+              <span class="live-label">Successful Sales</span>
+            </div>
+            <div class="live-stat glass">
+              <span class="live-num" data-target="1.2" data-suffix="B+">0</span>
+              <span class="live-label">Transaction Volume (KSh)</span>
+            </div>
+            <div class="live-stat glass">
+              <span class="live-num" data-target="3400">0</span>
+              <span class="live-label">Active Buyers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== TESTIMONIALS ========== -->
+      <section class="section testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Success Stories</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+          </div>
+
+          <div class="testimonial-carousel" id="testimonialCarousel">
+            <div class="testimonial-track" id="testimonialTrack">
+              <article class="testimonial-slide glass">
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                  “Sold my 4-bedroom house in Ruiru within 3 weeks. The 80/20
+                  split is the fairest I’ve seen. Blinq handled everything
+                  professionally.”
+                </p>
+                <div class="author">
+                  <div class="author-avatar">JM</div>
+                  <div>
+                    <strong>James Mwangi</strong>
+                    <span>Seller • Ruiru</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-slide glass">
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                  “Found our dream home in Karen through the marketplace. The
+                  process was transparent and the team was incredibly
+                  responsive.”
+                </p>
+                <div class="author">
+                  <div class="author-avatar">AK</div>
+                  <div>
+                    <strong>Amina Khan</strong>
+                    <span>Buyer • Nairobi</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-slide glass">
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                  “As a first-time seller I was nervous. The commission
+                  calculator and escrow protection gave me complete peace of
+                  mind.”
+                </p>
+                <div class="author">
+                  <div class="author-avatar">SW</div>
+                  <div>
+                    <strong>Sarah Wanjiku</strong>
+                    <span>Seller • Kiambu</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-slide glass">
+                <div class="stars">★★★★★</div>
+                <p class="quote">
+                  “Blinq’s marketing exposure is next level. My listing got
+                  featured and I received serious offers within days.”
+                </p>
+                <div class="author">
+                  <div class="author-avatar">DO</div>
+                  <div>
+                    <strong>David Ochieng</strong>
+                    <span>Seller • Westlands</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <button
+              class="carousel-btn prev"
+              id="testPrev"
+              aria-label="Previous testimonial"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="carousel-btn next"
+              id="testNext"
+              aria-label="Next testimonial"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots" id="testDots"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SELLER CTA BANNER ========== -->
+      <section class="cta-banner" id="contact">
+        <div class="cta-particles" aria-hidden="true"></div>
+        <div class="container">
+          <h2>Turn Your Property Into Profit Today</h2>
+          <p>
+            List your property on Blinq Estates Marketplace and instantly access
+            verified buyers while keeping 80% of every successful sale.
+          </p>
+          <div class="cta-buttons">
+            <a href="#sell" class="btn btn-cta">List My Property</a>
+            <a href="#properties" class="btn btn-outline-light"
+              >Browse Luxury Homes</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Investors</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Marketplace</h4>
+            <ul>
+              <li><a href="#sell">List Property</a></li>
+              <li><a href="#">Seller Dashboard</a></li>
+              <li><a href="#marketplace">Commission Policy</a></li>
+              <li><a href="#properties">Featured Listings</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col newsletter">
+            <h4>Stay Updated</h4>
+            <p>Get exclusive listings and market insights.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                placeholder="Your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" class="btn btn-cta">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter / X"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <p>&copy; 2026 Blinq Estates Marketplace. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== PROPERTY MODAL ========== -->
+    <div
+      class="modal"
+      id="propertyModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-content glass">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-gallery">
+          <div class="gallery-main">
+            <img id="modalMainImg" src="" alt="Property image" />
+            <button
+              class="gallery-nav prev"
+              id="galleryPrev"
+              aria-label="Previous image"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              class="gallery-nav next"
+              id="galleryNext"
+              aria-label="Next image"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="gallery-thumbs" id="galleryThumbs"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <p class="modal-location" id="modalLocation"></p>
+            <p class="modal-price" id="modalPrice"></p>
+          </div>
+          <div class="modal-meta" id="modalMeta"></div>
+          <p class="modal-desc" id="modalDesc"></p>
+          <div class="modal-features" id="modalFeatures"></div>
+          <div class="modal-amenities" id="modalAmenities"></div>
+          <div class="modal-map">
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Interactive Map Placeholder</span>
+            </div>
+          </div>
+          <div class="mortgage-calc glass">
+            <h4>Mortgage Estimator</h4>
+            <div class="mortgage-row">
+              <label>Loan Amount (KSh)</label>
+              <input type="number" id="mortgageAmount" value="20000000" />
+            </div>
+            <div class="mortgage-row">
+              <label>Interest Rate (%)</label>
+              <input type="number" id="mortgageRate" value="12" step="0.1" />
+            </div>
+            <div class="mortgage-row">
+              <label>Term (Years)</label>
+              <input type="number" id="mortgageYears" value="20" />
+            </div>
+            <p class="mortgage-result">
+              Est. Monthly: <strong id="mortgageResult">KSh 0</strong>
+            </p>
+          </div>
+          <form class="contact-seller glass" id="contactSellerForm">
+            <h4>Contact Seller</h4>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Phone" required />
+            <textarea placeholder="Message" rows="3" required></textarea>
+            <button type="submit" class="btn btn-cta">Send Message</button>
+          </form>
+          <div class="modal-actions">
+            <button class="btn btn-cta" id="scheduleViewing">
+              <i class="fas fa-calendar-check"></i> Schedule Viewing
+            </button>
+            <div class="share-btns">
+              <button class="share-btn" aria-label="Share on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </button>
+              <button class="share-btn" aria-label="Share on Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button class="share-btn" aria-label="Copy link">
+                <i class="fas fa-link"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- Floating action button -->
+    <a href="#sell" class="fab-list" aria-label="List your property">
+      <i class="fas fa-plus"></i>
+      <span>List Property</span>
+    </a>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
